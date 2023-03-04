@@ -1,0 +1,54 @@
+questions = ['who is the current president of India?','what is the color of Indian national flag?','who is the current prime minister of India?','which spice is often used for cough treatment?']
+answers = ['draupadi murmu', ("green,white,orange"),'Narendra Modi', 'black pepper']
+options = ['jawaharlal nehru', 'sardar patel', 'draupadi murmu', 'ramnath kovind', '(green,white,orange)', '(red,white,blue)', '(red,yellow,blue)', '(yellow,blue,orange)', 'narendra modi', 'indira gandhi', 'rahul gandhi', 'kejriwal', 'black pepper', 'red pepper', 'sandalwood', 'fenugreek', ]
+money = [10000 , 20000 , 40000, 80000]
+def display_game(questions,options):
+  
+  i = 0
+  for i in range(0,len(questions)):
+    question = questions[i]
+    print(f"Q:", question)
+    print(f"question for Rs.{money[i]}")
+    if i == 0:
+     
+      print(f"a. {options[0]}     b. {options[1]}")
+      print(f"c. {options[2]}     d. {options[3]}")
+      reply = int(input("enter the answer (0-3)"))
+      if reply == 2:
+        print(f'correct answer,you have won Rs:{money[i]}')
+      else:
+        print("wrong answer")
+        break
+    elif i == 1:
+      
+      print(f"a. {options[4*i]}     b. {options[4*i +1]}")
+      print(f"c. {options[4*i +2]}     d. {options[4*i+3]}")
+      reply = int(input("enter the answer (4-7)"))
+      if (reply == 4):
+         print(f"correct answer,you have won {money[i]}")
+      else:
+        print("wrong answer")
+        break
+        
+    elif i == 2:
+      print(f"a. {options[4*i]}     b. {options[4*i +1]}")
+      print(f"c. {options[4*i +2]}     d. {options[4*i+3]}")
+      reply = int(input("enter the answer (8-11)"))
+      if (reply == 8):
+         print(f"correct answer,you have won {money[i]}")
+      else:
+        print("wrong answer")
+        break
+    elif i ==3:
+      print(f"a. {options[4*i]}     b. {options[4*i +1]}")
+      print(f"c. {options[4*i +2]}     d. {options[4*i+3]}")
+      reply = int(input("enter the answer (12-15)"))
+      if (reply == 12):
+         print(f"correct answer,you have won {money[i]}")
+      else:
+        print("wrong answer")
+        break
+    else:
+      print("Game Over!!")
+display_game(questions,options)        
+      
